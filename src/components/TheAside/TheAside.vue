@@ -11,8 +11,8 @@ const itemList = ref([
     <h2 class="text-white flex-center">Content</h2>
     <li
       class="text-tesla-gray w-full h-10 flex-center hover:cursor-pointer hover:text-white"
-      v-for="item in 10"
-      :key="item"
+      v-for="item in itemList"
+      :key="item.key"
     >TheAside</li>
   </ul>
 </template>
