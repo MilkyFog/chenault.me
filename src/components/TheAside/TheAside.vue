@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 const itemList = ref([
-  { key: 1, label: 'home' },
-  { key: 2, label: 'resume'}
+  { key: 0, label: 'Vue', icon: 'i-logos-vue' },
+  { key: 1, label: 'Nuxt', icon: 'i-logos-nuxt-icon'}
 ])
 </script>
 

@@ -216,5 +216,20 @@
   - https://unocss.dev/config/rules
   - 如何实现unocss的动态规则
     - [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
-- 
+- withdefault 
+## withDefaults
+
+```typescript
+
+export interface Props {
+  msg?: string
+  labels?: string[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  msg: 'hello',
+  labels: () => ['one', 'two']
+})
+
+```
   
