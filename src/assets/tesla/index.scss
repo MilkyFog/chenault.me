@@ -1,0 +1,7 @@
+@use './tesla-font.scss';
+
+$_telsa: 'telsa';
+.telsa {
+
+  @apply bg-red;
+}

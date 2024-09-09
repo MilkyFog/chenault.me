@@ -182,6 +182,25 @@
     }
 
     ```
--  
+- sass-module
+  - [bilibili](https://www.bilibili.com/video/BV1uw4m1v79V/?spm_id_from=333.337.search-card.all.click&vd_source=bbb17d49654d454c95ef8157b625f1bb)
+  - @import
+    - css运行时: @import url('undefined.css') 哪怕写一个不存在的文件也不会报错
+      - 运行后的结构是@import url('undefined.css')
+    - sass编译时: @import 'undefined.css'
+      - 运行后结果为: * { marging: 0; padding: 0 } 
+      - 问题: 容易混淆 + 污染变量 后面的变量会覆盖前面的变量
+      - 问题: 没有私有的内部变量
+    - 
+  - @use: sass推荐使用的模块化方式
+    - 编译时: @use url('undefined.css') 编译时就会报错
+    - @use 'common.scss' 会给每个文件加上一个命名空间
+    - @use 'common.scss' as * 会把命名空间去掉
+    - @use 'common.scss' as common
+    - common.$color
+    - 定义私有变量: $_color: 'red': 加_或者-
+    - 
+  - 
+    
 - 
   
