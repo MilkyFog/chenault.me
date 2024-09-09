@@ -22,8 +22,9 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
 
-        // type
-        // "types": ["element-plug/global"] 
+        "paths": {
+          "~/*": ["./src/*"]
+        } 
       },
       "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "types/**/*.ts"]
     }

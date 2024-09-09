@@ -297,6 +297,8 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "router": true
+    "router": true,
+    "vueRouter": true,
+    "vite": true
   }
 }
