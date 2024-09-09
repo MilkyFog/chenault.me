@@ -19,6 +19,7 @@
   git push -u origin main
 - 部署: vercel
   - https://vercel.com/milkyfogs-projects/chenault-me
+  - 使用教程: https://www.cnblogs.com/echolun/p/17524216.html
 - 引入unocss
   - ni -D unocss @unocss/preset-mini @unocss/transformer-directives @iconify/json
   - uno.config.ts
@@ -201,6 +202,19 @@
     - 定义私有变量: $_color: 'red': 加_或者-
     - 
   - 
-    
+- unocss定义font-tesla为font-family
+  
+  - rules: uno.config.ts
+    rules: [
+      ['font-tesla', { 'font-family': '"Universal Sans Text", -apple-system, Arial, sans-serif, "Universal Sans Display Trial"'}]
+    ],
+  - 
+- unocss字体大小排序
+  - x: extra s: small m: medium l: large
+  - xxs xs s m l xl 2xl
+- unocss 设置letter-spacing文字的间隔 实现ls-1px
+  - https://unocss.dev/config/rules
+  - 如何实现unocss的动态规则
+    - [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
 - 
   

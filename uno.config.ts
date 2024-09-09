@@ -8,9 +8,13 @@ export default defineConfig({
     presetAttributify(), 
     presetIcons()
   ],
+  rules: [
+    ['font-tesla', { 'font-family': '"Universal Sans Text", -apple-system, Arial, sans-serif, "Universal Sans Display Trial"'}],
+    [/^ls-(\d+)$/, (match) => ({ 'letter-spacing': `${Number(match[1]) / 32 }rem` })],
+  ],
   shortcuts: {
-    'b-A': 'b-1px b-solid b-red',
-    'flex-center': 'flex items-center justify-center',
+    'b-A': 'b-1px b-solid b-#8e8e8e',
+    'flex-center': 'flex items-center justify-center'
   },
   transformers: [transformerDirectives()],
 })

@@ -1,16 +1,13 @@
 .text-tesla-gray {
-  font-family: "Universal Sans Text", -apple-system, Arial, sans-serif, 'Universal Sans Display Trial';
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
-  color: #8e8e8e;
+  @apply font-tesla;
+  @apply text-12px text-#8e8e8e fw-400 lh-26px;
   letter-spacing: 1.8px;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
+}
+.font-tesla {
+  font-family: "Universal Sans Text", -apple-system, Arial, sans-serif, 'Universal Sans Display Trial';   
 }
 
-.text-tesla-white {
+.text-tesla-white-2xl {
   font-family: "Universal Sans Text", -apple-system, Arial, sans-serif, 'Universal Sans Display Trial';
   font-size: 24px;
   font-style: normal;
@@ -20,4 +17,7 @@
   letter-spacing: 1.8px;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
+}
+.text-tesla-white-xl {
+
 }
