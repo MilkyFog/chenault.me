@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<IconProps>(), {
 </script>
 
 <template>
-  <i class="the-icon text-tesla-gray">
+  <i class="the-icon text-tesla-gray h-8">
     <i class="block size-4" :class="props.icon"></i>
     <span>
       <slot></slot>
