@@ -3,10 +3,11 @@ import TheAside from './components/TheAside/TheAside.vue'
 </script>
 
 <template>
-  <div>
-    <span>Hello World</span>
+  <div class="text-tesla-gray">
+    <span class="text-tesla-white">Hello!</span>
+    <span class="">uno</span>
+    <TheAside></TheAside>
   </div>
-  <TheAside></TheAside>
 </template>
 
 <style scoped></style>

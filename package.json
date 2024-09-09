@@ -12,11 +12,21 @@
     "vue": "^3.4.37"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.246",
+    "@unocss/preset-mini": "^0.62.3",
+    "@unocss/transformer-directives": "^0.62.3",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
     "cz-conventional-changelog-zh": "^0.0.2",
     "cz-customizable": "^7.2.1",
+    "happy-dom": "^15.7.3",
+    "sass": "^1.78.0",
     "typescript": "^5.5.3",
+    "unocss": "^0.62.3",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.1",
+    "vitest": "^2.0.5",
     "vue-tsc": "^2.0.29"
   },
   "config": {

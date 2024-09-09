@@ -41,4 +41,96 @@
     })
     ```
   - main.ts: `import "uno.css"`
--
+  - vite.config.ts
+- environment
+  - package.json
+    ```json
+    {
+      "name": "vue",
+      "private": true,
+      "version": "0.0.0",
+      "type": "module",
+      "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview",
+        "test": "vitest --u --w"
+      },
+      "dependencies": {
+        "vue": "^3.4.37"
+      },
+      "devDependencies": {
+        "@iconify/json": "^2.2.241",
+        "@types/spark-md5": "^3.0.4",
+        "@unocss/preset-icons": "^0.62.3",
+        "@unocss/preset-mini": "^0.62.2",
+        "@unocss/transformer-directives": "^0.62.2",
+        "@vitejs/plugin-vue": "^5.1.2",
+        "@vitejs/plugin-vue-jsx": "^4.0.1",
+        "@vue/test-utils": "^2.4.6",
+        "@vueuse/core": "^11.0.3",
+        "axios": "^1.7.5",
+        "cz-conventional-changelog-zh": "^0.0.2",
+        "cz-customizable": "^7.2.1",
+        "happy-dom": "^15.0.0",
+        "pinia": "^2.2.2",
+        "sass": "^1.77.8",
+        "spark-md5": "^3.0.2",
+        "typescript": "^5.5.3",
+        "unocss": "^0.62.2",
+        "unplugin-auto-import": "^0.18.2",
+        "unplugin-vue-components": "^0.27.4",
+        "vite": "^5.4.1",
+        "vitest": "^2.0.5",
+        "vue-tsc": "^2.0.29"
+      },
+      "config": {
+        "commitizen": {
+          "path": "./node_modules/cz-conventional-changelog-zh"
+        }
+      }
+    }
+    ```
+  - vite.config.ts
+    ```ts
+    /// <reference types="vitest" />
+    import { defineConfig } from 'vite'
+    import vue from '@vitejs/plugin-vue'
+    import UnoCSS from 'unocss/vite'
+    import VueJSX from '@vitejs/plugin-vue-jsx'
+    import AutoImport from 'unplugin-auto-import/vite'
+    import Components from 'unplugin-vue-components/vite'
+    import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
+    // https://vitejs.dev/config/
+    const plugins = [
+      vue(), 
+      UnoCSS(), 
+      VueJSX(), 
+      AutoImport({
+        imports: ['vue', 'vitest', '@vueuse/core'], // 指定需要自动引入的文件
+        dts: './types/auto-imports.d.ts', // 指定生成文件的路径
+        dirs: ['./src/hooks/**'], // 自定义API的引入路径
+        eslintrc: {
+          enabled: true,
+          filepath: './types/.eslintrc-auto-import.json' // 指定文件路径
+        },
+        resolvers: [ElementPlusResolver()]
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+        dts: './types/components.d.ts',
+        dirs: ['./src/components'],
+      }) 
+    ]
+    export default defineConfig({
+      plugins,
+      test: {
+        environment: 'happy-dom',
+        exclude: ['**/node_modules/**']
+      },
+    })
+    ```
+  - 
+- 引入sass
+  

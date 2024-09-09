@@ -4,7 +4,7 @@
 
 <template>
   <div class="">
-    <div class="">TheAside</div>
+    <div class="text-tesla-gray">TheAside</div>
   </div>
 </template>
 
