@@ -131,6 +131,57 @@
       },
     })
     ```
-  - 
-- 引入sass
+  - main.ts
+    ```ts
+    import { createApp } from 'vue'
+    import App from './App.vue'
+    // css sass
+    import 'virtual:uno.css'
+    import './assets/global.scss'
+    import { createPinia } from 'pinia'
+    // import ElementPlus from 'element-plus'
+    // import 'element-plus/dist/index.css'
+
+    const pinia = createPinia()
+    const app = createApp(App)
+
+    app.use(pinia)
+    // app.use(ElementPlus)
+    app.mount('#app')
+    ```
+  - tsconfig.app.json 
+    ```json
+    {
+      "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        /* JSX TSX */
+        "jsx": "preserve",
+        "jsxImportSource": "vue",
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+
+        // type
+        // "types": ["element-plug/global"] 
+      },
+      "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "types/**/*.ts"]
+    }
+
+    ```
+-  
+- 
   

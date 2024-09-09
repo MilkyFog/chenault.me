@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
 import './assets/tesla/tesla-font.scss'
+import './assets/global.scss'
 import 'uno.css'
 import App from './App.vue'
 
