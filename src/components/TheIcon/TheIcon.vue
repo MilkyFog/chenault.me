@@ -1,16 +1,18 @@
 <script setup lang="ts">
 type IconProps = { 
-  icon: string
+  icon?: string
+  color?: string
 }
 const props = withDefaults(defineProps<IconProps>(), {
-  icon: 'i-logos-vueuse'
+  icon: 'i-logos-vueuse',
+  color: '',
 })
 </script>
 
 <template>
-  <i class="the-icon text-tesla-gray h-8">
-    <i class="block size-4" :class="props.icon"></i>
-    <span>
+  <i class="the-icon text-tesla-gray h-8 flex-center">
+    <i class="block size-4" :class="props.icon" :style="{ 'background-color':  props.color }"></i>
+    <span class="text-center">
       <slot></slot>
     </span>
   </i> 
