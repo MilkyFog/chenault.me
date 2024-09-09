@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<IconProps>(), {
 <template>
   <i class="the-icon text-tesla-gray h-8 flex-center">
     <i class="block size-4" :class="props.icon" :style="{ 'background-color':  props.color }"></i>
-    <span class="text-center">
+    <span class="text-center ml-2">
       <slot></slot>
     </span>
   </i> 

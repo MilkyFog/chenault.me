@@ -1,5 +1,5 @@
 import { createMemoryHistory, createRouter, RouteRecordRaw } from 'vue-router'
-import HomeView from '../../pages/HomeView.vue'
+import HomeView from '../../pages/HomeView/HomeView.vue'
 import VueView from '../../pages/VueView.vue'
 import NuxtView from '../../pages/NuxtView.vue'
 import ComponentsView from '../../pages/ComponentsView.vue'

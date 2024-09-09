@@ -14,7 +14,7 @@ const itemList = ref<Item[]>([
 
 <template>
   <ul class="the-aside-container">
-    <RouterLink class="text-gray-5 text-lg fw-bold flex-center hover:cursor-pointer hover:text-gray-1" to="/">Home</RouterLink>
+    <RouterLink class="text-gray-4/50 text-lg fw-bold flex-center hover:cursor-pointer hover:text-gray-1" to="/">Chenault</RouterLink>
     <li
       class="text-tesla-gray w-full h-10 flex-center hover:cursor-pointer hover:text-white gap-2"
       v-for="item in itemList"
