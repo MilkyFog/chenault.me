@@ -4,14 +4,18 @@ import VueView from '~/pages/VueView.vue'
 import NuxtView from '~/pages/NuxtView.vue'
 import ComponentsView from '~/pages/ComponentsView.vue'
 
-export type RouteConfig = { // page.ts导出遵守的类型规范
+export declare type RouteConfig = { // page.ts导出遵守的类型规范
 	name: string
 	title: string
 	children: RouteConfig[]
 }
-export type PageModules = {
-	[key: string]: RouteConfig
+declare type Module = {
+	default: RouteConfig
 }
+declare type PageModules = {
+	[key: string]: Module
+}
+
 export const pageModules = import.meta.glob('~/pages/**/page.**', { 
 	eager: true,
 }) as PageModules // { 'path': page.ts的内容 }
@@ -20,10 +24,13 @@ const pattern = /page\.(j|t)s/ // 匹配page.js和page.ts
 // 导入组件模块
 export const componentModules = import.meta.glob('~/pages/**/index.vue')
 // 生成并导出路由
-export const autoRoutes = Object.entries(pageModules).map((page: [string, any]) => {
+
+export const autoRoutes = Object.entries(pageModules).map((page: [string, Module]) => {
 	const [pagePath, config] = page
+	console.log(config)
 	const path = pagePath.replace('/src/pages', '').replace(pattern, '') || '/' // 将page.ts路径的前面的/src/page去除 以及最后的page.ts去除 /vue-router
 	const name = config.default.name
+
 	const children = config.default.children
 	const componentPath = pagePath.replace(pattern, 'index.vue') // 将/pages/vue-router/page.ts => /pages/vue-router/index.vue
 	const routes = {
