@@ -306,6 +306,8 @@
     "useRoute": true,
     "useRouter": true,
     "autoRouter": true,
-    "pageModules": true
+    "pageModules": true,
+    "autoRoutes": true,
+    "componentModules": true
   }
 }
