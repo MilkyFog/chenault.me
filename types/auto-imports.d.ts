@@ -283,6 +283,7 @@ declare global {
   const useWindowFocus: typeof import('@vueuse/core')['useWindowFocus']
   const useWindowScroll: typeof import('@vueuse/core')['useWindowScroll']
   const useWindowSize: typeof import('@vueuse/core')['useWindowSize']
+  const vFocus: typeof import('../src/hooks/vue/order/v-focus')['vFocus']
   const vi: typeof import('vitest')['vi']
   const vite: typeof import('../src/hooks/vite/vite.md')['default']
   const vitest: typeof import('vitest')['vitest']

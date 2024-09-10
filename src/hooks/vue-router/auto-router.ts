@@ -27,7 +27,6 @@ export const componentModules = import.meta.glob('~/pages/**/index.vue')
 
 export const autoRoutes = Object.entries(pageModules).map((page: [string, Module]) => {
 	const [pagePath, config] = page
-	console.log(config)
 	const path = pagePath.replace('/src/pages', '').replace(pattern, '') || '/' // 将page.ts路径的前面的/src/page去除 以及最后的page.ts去除 /vue-router
 	const name = config.default.name
 
@@ -50,7 +49,6 @@ const constantRoutes: RouteRecordRaw[] = [
   { path: '/components', component: ComponentsView }
 ]
 const routes: any[] = [...constantRoutes, ...autoRoutes]
-console.log(routes)
 const router = createRouter({
 	routes,
 	history: createWebHashHistory()

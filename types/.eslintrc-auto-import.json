@@ -308,6 +308,7 @@
     "autoRouter": true,
     "pageModules": true,
     "autoRoutes": true,
-    "componentModules": true
+    "componentModules": true,
+    "vFocus": true
   }
 }
