@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
-import './assets/global.scss'
+import '~/assets/global.scss'
 import 'uno.css'
-import App from './App.vue'
-import router from './hooks/vue-router/router'
+import App from '~/App.vue'
+import router from '~/hooks/vue-router/router'
 
 const app = createApp(App)
 app.use(router as any)

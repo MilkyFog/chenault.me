@@ -304,6 +304,8 @@
     "onBeforeRouteUpdate": true,
     "useLink": true,
     "useRoute": true,
-    "useRouter": true
+    "useRouter": true,
+    "autoRouter": true,
+    "pageModules": true
   }
 }

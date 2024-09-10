@@ -2,6 +2,8 @@
 import Avatar from '~/assets/img/avatar.jpg'
 import StackList from './StackList/StackList.vue'
 import { Stack } from './StackList'
+import { useAsideStore } from '~/components/TheAside/the-aside.store'
+import { Item } from '~/components/TheAside'
 const frontendStackList: Stack[] = [
   {
     key: 1,
@@ -169,6 +171,15 @@ const backendStackList: Stack[] = [
     label: 'ESLint'
   },
 ]
+onMounted(() => {
+  const {itemList} = useAsideStore()
+  const homeItemList: Item[] = [
+    { key: 0, label: 'Vue', icon: 'i-logos-vue' },
+    { key: 1, label: 'Nuxt', icon: 'i-logos-nuxt-icon' },
+    { key: 2, label: 'Components', icon: 'i-carbon-cube' }
+  ]
+  itemList.value = homeItemList
+})
 </script>
 
 <template>

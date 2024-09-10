@@ -20,8 +20,8 @@ onMounted(() => {
   <div class="vue-view-container">
     <div class="">当前路由: {{ route.fullPath }}</div>
     <div class="item-list w-80% h-30 grid lg:grid-cols-3 xl:grid-cols-4 mx-auto gap-4">
-      <div class="the-item rounded-xl hover:cursor-pointer min-w-60 flex items-center px-4" v-for="item in 4" :key="item">
-        <i class="i-logos-nuxt saturate-0 block size-20 text-center w-20%" />
+      <div class="the-item rounded-xl hover:cursor-pointer min-w-60 flex items-center gap-4 h-fit px-1" v-for="item in 4" :key="item">
+        <i class="i-logos-nuxt-icon saturate-0 block size-20 text-center w-20%" />
         <div class="w-80% h-full flex flex-col justify-center">
           <h2 class="text-hover text-white/50 text-nowrap ls-0">Nuxt Playgound</h2>
           <span class="text-span text-gray-4/50 ls-0">Interactive Playgound for leanring Nuxt</span>

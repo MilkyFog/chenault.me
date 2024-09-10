@@ -1,0 +1,5 @@
+describe('vue-router', () => {
+  test('', () => {
+    
+  }) 
+})

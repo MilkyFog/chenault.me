@@ -6,9 +6,12 @@ const { itemList } = useAsideStore()
 <template>
   <ul class="the-aside-container">
     <RouterLink
-      class="text-gray-4/50 text-lg fw-bold flex-center hover:cursor-pointer hover:text-gray-1"
+      class="text-lg fw-bold flex-center hover:cursor-pointer text-gray-1/90 hover:text-gray-1 gap-2 shadow-xl shadow-gray-1/50"
       to="/"
-    >Chenault</RouterLink>
+    >
+    <i class="i-carbon-cube text-gray-1"/>
+    <span>Chenault</span>
+  </RouterLink>
     <li
       class="text-tesla-gray w-full h-10 flex-center hover:cursor-pointer hover:text-white gap-2"
       v-for="item in itemList"

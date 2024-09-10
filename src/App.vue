@@ -4,10 +4,10 @@ import { RouterView } from 'vue-router'
 
 <template>
   <div class="text-tesla-gray flex-center w-full h-100vh bg-black">
-    <div class="left min-w-50 max-w-20% h-full b-r-1 b-r-solid b-r-#8e8e8e">
+    <div class="left min-w-50 max-w-20% h-full">
       <TheAside />
     </div>
-    <div class="right w-100% h-full">
+    <div class="right w-100% h-full bg-gray-5/30%">
       <RouterView />
     </div>
   </div>
