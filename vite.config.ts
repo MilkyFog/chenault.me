@@ -14,7 +14,7 @@ const plugins = [
   UnoCSS(), 
   VueJSX(), 
   AutoImport({
-    imports: ['vue', 'vitest', '@vueuse/core'], // 指定需要自动引入的文件
+    imports: ['vue', 'vitest', '@vueuse/core', 'vue-router'], // 指定需要自动引入的文件
     dts: './types/auto-imports.d.ts', // 指定生成文件的路径
     dirs: ['./src/hooks/**'], // 自定义API的引入路径
     eslintrc: {

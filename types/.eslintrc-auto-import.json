@@ -299,6 +299,11 @@
     "whenever": true,
     "router": true,
     "vueRouter": true,
-    "vite": true
+    "vite": true,
+    "onBeforeRouteLeave": true,
+    "onBeforeRouteUpdate": true,
+    "useLink": true,
+    "useRoute": true,
+    "useRouter": true
   }
 }
