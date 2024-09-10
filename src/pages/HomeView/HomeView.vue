@@ -4,6 +4,7 @@ import StackList from './StackList/StackList.vue'
 import { Stack } from './StackList'
 import { useAsideStore } from '~/components/TheAside/the-aside.store'
 import { Item } from '~/components/TheAside'
+import { codeToHtml } from 'shiki'
 const frontendStackList: Stack[] = [
   {
     key: 1,
@@ -180,6 +181,16 @@ onMounted(() => {
   ]
   itemList.value = homeItemList
 })
+
+// shiki
+const code = `console.log('Hello World')
+console.log('errro')
+`
+const codeBlock = await codeToHtml(code, {
+  lang: 'typescript',
+  theme: 'vitesse-black',
+})
+
 </script>
 
 <template>
@@ -195,6 +206,11 @@ onMounted(() => {
       <StackList class="w-80%" :stack-list="frontendStackList"/> 
       <h2 class="title">Backend</h2>
       <StackList class="w-80%" :stack-list="backendStackList"></StackList> 
+      <div class="relative">
+        <span class="absolute right-0 top-0 translate-x--1">ts</span>
+        <button></button>
+        <div class="w-fit h-fit b-A bg-black py-4 pl-4 pr-30" v-html="codeBlock"></div>
+      </div>
     </div>
   </div>
 </template>

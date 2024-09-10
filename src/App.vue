@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+
+
 </script>
 
 <template>
@@ -7,12 +8,12 @@ import { RouterView } from 'vue-router'
     <div class="left min-w-50 max-w-20% h-full">
       <TheAside />
     </div>
-    <div class="right w-100% h-full bg-gray-5/30%">
-      <RouterView />
-    </div>
+    <Suspense>
+      <div class="right w-100% h-full bg-gray-5/30%">
+        <RouterView />
+      </div>
+    </Suspense>
   </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

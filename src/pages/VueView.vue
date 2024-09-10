@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 import { Item } from '~/components/TheAside'
 import { useAsideStore } from '~/components/TheAside/the-aside.store'
-
 
 const route = useRoute()
 onMounted(() => {

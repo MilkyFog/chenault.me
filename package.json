@@ -23,6 +23,7 @@
     "cz-customizable": "^7.2.1",
     "happy-dom": "^15.7.3",
     "sass": "^1.78.0",
+    "shiki": "^1.16.3",
     "typescript": "^5.5.3",
     "unocss": "^0.62.3",
     "unplugin-auto-import": "^0.18.2",
