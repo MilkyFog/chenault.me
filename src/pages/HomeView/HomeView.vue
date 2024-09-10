@@ -4,7 +4,8 @@ import StackList from './StackList/StackList.vue'
 import { Stack } from './StackList'
 import { useAsideStore } from '~/components/TheAside/the-aside.store'
 import { Item } from '~/components/TheAside'
-import { codeToHtml } from 'shiki'
+import TheShiki from '~/hooks/shiki/TheShiki.vue'
+
 const frontendStackList: Stack[] = [
   {
     key: 1,
@@ -183,14 +184,14 @@ onMounted(() => {
 })
 
 // shiki
-const code = `console.log('Hello World')
-console.log('errro')
-`
+const code = 
+`import { codeToHtml } from 'shiki'
+const code = 'console.log('Hello World')'
 const codeBlock = await codeToHtml(code, {
   lang: 'typescript',
   theme: 'vitesse-black',
 })
-
+`
 </script>
 
 <template>
@@ -201,16 +202,11 @@ const codeBlock = await codeToHtml(code, {
         :src="Avatar"
       />
       <h1 class="text-xl text-white">Hello! I'm Chenault, a full stack coder.</h1>
-      <h2 class="resume">Resume</h2>
       <h2 class="title">Frontend</h2>
       <StackList class="w-80%" :stack-list="frontendStackList"/> 
       <h2 class="title">Backend</h2>
       <StackList class="w-80%" :stack-list="backendStackList"></StackList> 
-      <div class="relative">
-        <span class="absolute right-0 top-0 translate-x--1">ts</span>
-        <button></button>
-        <div class="w-fit h-fit b-A bg-black py-4 pl-4 pr-30" v-html="codeBlock"></div>
-      </div>
+      <TheShiki :code/>
     </div>
   </div>
 </template>

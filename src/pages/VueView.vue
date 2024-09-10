@@ -7,7 +7,8 @@ onMounted(() => {
   const vueItemList: Item[] = [
     { key: 0, label: 'Vue-Router', icon: 'i-logos-vue' },
     { key: 1, label: 'Nuxt', icon: 'i-logos-nuxt-icon' },
-    { key: 2, label: 'Vue-Use', icon: 'i-logos-vueuse' }
+    { key: 2, label: 'Vue-Use', icon: 'i-logos-vueuse' },
+    { key: 3, label: 'Shiki', icon: 'i-logos-shiki-icon'}
   ]
   const { itemList } = useAsideStore()
   itemList.value = vueItemList
