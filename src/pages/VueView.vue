@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
   <div class="vue-view-container">
     <div class="">当前路由: {{ route.fullPath }}</div>
-    <div class="item-list w-80% h-30 grid lg:grid-cols-3 xl:grid-cols-4 mx-auto gap-4">
+    <div class="item-list w-80% h-30 grid lg:grid-cols-3 xl:grid-cols-4 mx-auto gap-8">
       <div class="the-item rounded-xl hover:cursor-pointer min-w-60 flex items-center gap-4 h-fit px-1" v-for="item in 4" :key="item">
         <i class="i-logos-nuxt-icon saturate-0 block size-20 text-center w-20%" />
         <div class="w-80% h-full flex flex-col justify-center">
@@ -35,6 +35,7 @@ onMounted(() => {
   filter: saturate(0); 
 }
 .the-item {
+  @apply shadow-md shadow-gray-500;
   &:hover {
     background-color: rgba(136, 136, 136, .1);
     .text-hover {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 onMounted(() => {
   const router = useRouter()
-  router.push('/vue')
+  router.push('/notes')
 })
 
 </script>

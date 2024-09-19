@@ -5,6 +5,7 @@ import { Stack } from './StackList'
 import { useAsideStore } from '~/components/TheAside/the-aside.store'
 import { Item } from '~/components/TheAside'
 import TheShiki from '~/hooks/shiki/TheShiki.vue'
+import InputUrl from '~/interview/input-url/InputUrl.vue'
 
 const frontendStackList: Stack[] = [
   {
@@ -178,7 +179,8 @@ onMounted(() => {
   const homeItemList: Item[] = [
     { key: 0, label: 'Vue', icon: 'i-logos-vue' },
     { key: 1, label: 'Nuxt', icon: 'i-logos-nuxt-icon' },
-    { key: 2, label: 'Components', icon: 'i-carbon-cube' }
+    { key: 2, label: 'Components', icon: 'i-carbon-cube' },
+    { key: 3, label: 'notes', icon: 'i-carbon-cube'}
   ]
   itemList.value = homeItemList
 })
@@ -207,6 +209,7 @@ const codeBlock = await codeToHtml(code, {
       <h2 class="title">Backend</h2>
       <StackList class="w-80%" :stack-list="backendStackList"></StackList> 
       <TheShiki :code/>
+      <InputUrl></InputUrl>
     </div>
   </div>
 </template>
