@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./../src/components/HelloWorld.vue')['default']
     ItemList: typeof import('./../src/components/TheAside/ItemList/ItemList.vue')['default']
+    RouteList: typeof import('./../src/components/TheAside/RouteList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheAside: typeof import('./../src/components/TheAside/TheAside.vue')['default']
@@ -16,5 +17,7 @@ declare module 'vue' {
     TheHead: typeof import('./../src/components/TheHead/TheHead.vue')['default']
     TheIcon: typeof import('./../src/components/TheIcon/TheIcon.vue')['default']
     TheItem: typeof import('./../src/components/TheItem/TheItem.vue')['default']
+    TheSearch: typeof import('./../src/components/TheAside/TheSearch/TheSearch.vue')['default']
+    TheTitle: typeof import('./../src/components/TheAside/TheTitle/TheTitle.vue')['default']
   }
 }
