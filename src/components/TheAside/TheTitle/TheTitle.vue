@@ -4,12 +4,17 @@
 
 <template>
   <RouterLink
-    class="text-lg fw-bold flex-center hover:cursor-pointer text-gray-1/90 hover:text-gray-1 gap-2 shadow-xl shadow-gray-1/50"
+    class=""
+    flex="~ center gap-2"
+    un-text="text-gray-1/90 text-lg"
+    fw-bold
+    hover="~ cursor-pointer text-gray-100"
+    shadow="~ xl gray-3/50"
     to="/"
   >
     <i class="i-carbon-cube text-gray-1" />
     <span>Chenault</span>
-  </RouterLink> 
+  </RouterLink>
 </template>
 
 <style scoped lang="scss"></style>

@@ -5,7 +5,9 @@ import transformerDirectives from '@unocss/transformer-directives'
 export default defineConfig({
   presets: [
     presetMini(), 
-    presetAttributify(), 
+    presetAttributify({
+      prefix: 'un-',
+    }), 
     presetIcons()
   ],
   rules: [

@@ -6,4 +6,7 @@
     ```html
     ```
   - 
+- vue-command-palette
+  - https://vue-command-palette.vercel.app/
+  - 
 

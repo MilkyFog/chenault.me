@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const isOpen = ref(false)
+const visible = ref(true)
 const handleFocus = (e: any) => { 
   e.target.blur()
-  isOpen.value = true
+  visible.value = true
 }
 </script>
 
@@ -19,8 +19,8 @@ const handleFocus = (e: any) => {
       type="text"
       placeholder="Search"
       class="w-full bg-transparent placeholder:text-gray-400 focus:outline-none outline-none border-initial"
-      text="~ gray-300"
-      @focus="handleFocus"
+      un-text="~ gray-300"
+      @focus="(e) => handleFocus(e)"
     />
     <span
       class="flex items-center b-A rounded absolute right-1.5 top-1/2 -translate-y-1/2 px-1"
@@ -30,8 +30,10 @@ const handleFocus = (e: any) => {
       <i class="block i-carbon-mac-command"></i>
       <span class="ml-1">K</span>
     </span>
-    <div v-show="isOpen" class="command-menu">CommandMenu</div>
+    <CommandMenu :visible />
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
